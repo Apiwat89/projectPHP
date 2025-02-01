@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    cursor: url("img/oth928.cur"), auto;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden; 
+}
+
+#background-video {
+    position: fixed;
+    top: -300px;
+    left: -300px;
+    z-index: -1; 
+}
+
+/* bodylogin */
+.bodylogin {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: 80px;
+}
+
+/* login */
+.login {
+    font-family: 'Signika Negative', sans-serif;
+    width: 30%;
+    backdrop-filter: blur(20px);
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 0 3px #dcdcdc;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 35%;
+    margin-top: 150px;
+}
+
+.login h1 {
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 1px black;
+}
+
+.login .username,
+.login .password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login .username input,
+.login .password input {
+    font-family: 'Signika Negative', sans-serif;
+    width: 60%;
+    height: 30px;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0, .4);
+}
+
+/* button ok */
+.login .button {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.login .button .btnOK {
+    font-family: 'Signika Negative', sans-serif;
+    width: 60%;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgb(0, 166, 255);
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
+}
+
+.login .button .btnOK:hover {
+    background-color: rgb(0, 144, 222);
+    transform: translateY(2px);
+}
+
+.login .button .btnOK:active {
+    background-color: #ffffff;
+    color: black;
+    transition: all 0s;
+}
+
+/* p */
+.login p {
+    color: #dcdcdc;
+    text-align: center;
+}
+
+.login p a {
+    text-decoration: none;
+    color: #00b7ff;
+}

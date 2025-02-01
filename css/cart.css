@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    cursor: url("img/oth931.cur"), auto;
+    display: flex;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+#background-video {
+    position: fixed;
+    top: -300px;
+    left: -300px;
+    z-index: -1; 
+}
+
+/* << head >> */
+.head {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 1; 
+}
+
+div {
+    display: inline-block;
+}
+
+/* logo */
+.logo {
+    width: 20%;
+    height: 70px;
+    text-align: center;
+}
+
+.logo img {
+    background-size: cover;
+    width: 75%;
+    margin-top: 15px;
+}
+
+/* search */
+.search {
+    width: 30%;
+    height: inherit;
+    position: absolute;
+    text-align: center;
+}
+
+.search input {
+    font-family: 'Roboto Mono', monospace;
+    width: 80%;
+    height: 40%;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+    padding-left: 32px;
+    padding-right: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #0000003b;
+    color: #ffffff;
+}
+
+.search input::placeholder {
+    color: #ffffffcf;
+}
+
+.search i {
+    position: absolute;
+    margin-top: 36px;
+    margin-left: 10px;
+    color: #ffffffcf;
+}
+
+.search .muteButton {
+    background-color: #ffffff00;
+    border: 0px;
+}
+
+.search .muteButton i {
+    font-size: 20px;
+    margin-top: -15px;
+}
+
+/* box */
+.box {
+    width: 50%;
+    height: 70px;
+    float: right;
+    text-align: center;
+}
+
+.box ul {
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.box li {
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    margin-right: -4px;
+    cursor: default;
+    font-size: 15px;
+}
+
+.box li ul {
+    position: absolute;
+    display: none;
+}
+
+.box li:hover ul,
+.box li ul li {
+    display: block;
+    width: inherit;
+}
+
+.box li:hover {
+    border: 1px solid rgb(255, 255, 255, .2);
+    transition: all .5s;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    transform: translateY(5px);
+}
+
+.box .Service {
+    width: 100px;
+}
+
+.box .Service p {
+    margin-left: -14px;
+}
+
+.box i {
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 6px;
+}
+
+.box a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* button login */
+.box .btnLogin {
+    padding: 8px;
+    margin-top: 25px;
+    margin-right: 5px;
+    font-size: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: all 0.5s;
+    background-color: #ffffff00;
+    color: #ffffff;
+}
+
+.box .btnLogin:hover {
+    background-color: rgb(225, 225, 225);
+    color: #000000;
+    transform: translateY(5px);
+}
+
+.box .btnLogin:active {
+    background-color: #c5c5c5;
+    transition: all 0s;
+}
+
+/* button sign */
+.box .btnSign {
+    padding: 8px;
+    font-size: 15px;
+    background-color: rgb(0, 166, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.box .btnSign:hover {
+    background-color: rgb(0, 144, 222);
+    transform: translateY(5px);
+}
+
+.box .btnSign:active {
+    background-color: #c5c5c5;
+    color: black;
+    transition: all 0s;
+}
+
+/* button logout */
+.box .user-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .user-link {
+    padding: 8px;
+    margin-top: 25px;
+    margin-right: 5px;
+    font-size: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: all 0.5s;
+    background-color: #ffffff00;
+    color: #ffffff;
+    width: 100%;
+}
+
+.box .user-link:hover,
+.box .user-link i:hover {
+    transform: translateY(5px);
+    background-color: rgb(225, 225, 225);
+    color: #000000;
+}
+
+.box .user-link span {
+    margin-left: 2px;
+}
+
+.box .user-link i {
+    position: relative;
+    margin-top: -16px;
+}
+
+.box .setting {
+    font-size: 20px;
+    margin-top: -33px;
+    margin-right: -105px;
+}
+
+.box .setting i:hover {
+    font-size: 30px;
+    transition: all 0.5s;
+    transform: translate(-5px,-5px);
+}
+
+/* << content >> */
+.content {
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    z-index: 0;
+    text-align: center;
+}
+
+.boxcon {
+    border-radius: 30px;
+    width: 80%;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+/* cart */
+.boxcon .cart {
+    margin-top: 50px;
+    position: relative;
+}
+
+.boxcon .cart a {
+    text-decoration: none;
+}
+
+.boxcon .cart p {
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.boxcon .cart i {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.boxcon .cart .num {
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(148, 255, 176);
+    font-size: 25px;
+    position: absolute;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+/* list, listc , listcb */
+.boxcon .list {
+    width: 80%;
+    height: 30%;
+    background-color: rgba(148, 255, 176, 0.706);
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+.boxcon .listc {
+    width: 80%;
+    height: 30%;
+    background-color: rgba(148, 255, 176, 0.706);
+    border-radius: 30px;
+    margin-top: 40px
+}
+
+.boxcon .listcb {
+    width: 80%;
+    height: 30%;
+    background-color: rgba(148, 255, 176, 0.706);
+    border-radius: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.boxcon .list img {
+    width: 40%;
+    height: 320px;
+    float: left;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(1, 255, 69);
+}
+
+.boxcon .listc img {
+    padding: 30px;
+    width: 40%;
+    height: 100%;
+    float: left;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(1, 255, 69);
+}
+
+.boxcon .listcb img {
+    padding: 30px;
+    width: 40%;
+    height: 300px;
+    float: left;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(1, 255, 69);
+}
+
+.boxcon .about {
+    margin-top: 110px;
+    width: 40%;
+    height: 100%;
+}
+
+.boxcon .about button {
+    margin-top: 6px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #ffffff6d;
+}
+
+.boxcon .about button:hover {
+    background-color: #a3a3a36d;
+}
+
+.boxcon .about button:active {
+    background-color: #0000006d;
+    color: #ffffff;
+}
+
+.boxcon .about input {
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #ffffff6d;
+    width: 100px;
+}
+
+/* button confirm */
+.boxcon .confirm {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.boxcon .confirm .total {
+    width: 50%;
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgba(148, 255, 176, 0.706);
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.boxcon .confirm .total p {
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+.boxcon input[type='submit']:nth-of-type(1) {
+    font-family: 'Roboto Mono', monospace;
+    width: 150px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: rgba(1, 255, 69, 0.706);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.boxcon input[type='submit']:hover:nth-of-type(1) {
+    background-color: rgba(2, 188, 52, 0.706);
+}
+
+.boxcon input[type='submit']:active:nth-of-type(1) {
+    background-color: #c5c5c5;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    transform: translateY(5px);
+}
+
+.boxcon input[type='submit']:nth-of-type(2) {
+    font-family: 'Roboto Mono', monospace;
+    width: 150px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: rgba(255, 60, 0, 0.775);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.boxcon input[type='submit']:hover:nth-of-type(2) {
+    background-color: rgba(196, 46, 0, 0.775);
+}
+
+.boxcon input[type='submit']:active:nth-of-type(2) {
+    background-color: #c5c5c5;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    transform: translateY(5px);
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+    width: 12px; 
+}
+
+body::-webkit-scrollbar-track {
+    background: #000000; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #d9f8ff;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background: #b8f2ff;
+}
